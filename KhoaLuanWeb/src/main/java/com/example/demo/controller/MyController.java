@@ -151,7 +151,9 @@ public class MyController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println(bn.getTen());
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+		String stringDate=df.format(bn.getNgaySinh());
+		model.addAttribute("ngaysinh", stringDate);
 		model.addAttribute("benhnhan", bn);
 		List<LichHen> lichHen = new ArrayList<LichHen>();
 		try {
@@ -282,7 +284,7 @@ public class MyController {
 		}
 		LichHen lh = null;
 		lh = lichhenservice.GetLichHenBenhNhan(lichhenservice.doichuoitungay(date), benhNhan.getId());
-		lichHen.setBenhNhan(benhNhan);
+		lichHen.setBenhnhan(benhNhan);
 		lichHen.setNhanVien(nhanVien);
 		lichHen.setThoiGian(date);
 		lichHen.setHinhThuc(true);
@@ -334,6 +336,27 @@ public class MyController {
 
 		redirectAttributes.addFlashAttribute("message", " Bạn đã đặt lịch hẹn thất bại");
 		return "redirect:/dat-lich";
+	}
+	
+	@PostMapping("/capnhat")
+	public String update(@ModelAttribute("benhNhan") BenhNhan benhNhan,Principal principal,
+			 RedirectAttributes redirectAttributes) throws IOException {
+			BenhNhan bn = new BenhNhan();
+			bn=benhnhanservice.GetOneBenhNhanByUser(principal.getName());
+		
+			benhNhan.setId(bn.getId());
+			benhNhan.setTaiKhoan(bn.getTaiKhoan());
+			benhNhan.setNgaySinh(bn.getNgaySinh());
+			int ketquaPUT = benhnhanservice.PUTBenhNhan(benhNhan);
+			if (ketquaPUT == 200) {
+				
+				redirectAttributes.addFlashAttribute("thanhcong", "Cập nhật thành công!");
+				return "redirect:/";
+			} else {
+				redirectAttributes.addFlashAttribute("thatbai", "Cập nhật thất bại!");
+				return "redirect:/thong-tin";
+
+			}
 	}
 
 }

@@ -33,7 +33,7 @@
 		</ul>
 		<div id="tabs-1" class="tab1">
 			<div class="container">
-				<form class="form" action="#" method="post" th:object="${benhnhan}">
+				<form th:action="@{/capnhat}" method="post" th:object="${benhnhan}">
 					<div class="d-grid gap-4" id="anhnens1">
 						<div class="row p-3 ">
 							<div class="col-md-6">
@@ -56,9 +56,9 @@
 									th:field="*{diaChi}"></textarea>
 							</div>
 							<div class="col-md-6">
-								<label for="inputEmail3" class="col m-0 p-2">Ngày Sinh :</label>
+								<label for="inputEmail3" class="col m-0 p-2">Chứng minh :</label>
 								<input type="text" placeholder="yyyy-mm-dd" class="col form-control" required="required"
-									id="ngaySinh" th:field="*{ngaySinh}" />
+									name="cmnd" th:field="*{cmnd}"/>
 							</div>
 						</div>
 

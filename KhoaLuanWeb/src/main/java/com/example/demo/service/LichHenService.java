@@ -13,13 +13,12 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import enity.LichHen;
+import enity.Role;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonParser;
-
-import enity.LichHen;
-import enity.Role;
 
 @Repository
 public class LichHenService {
