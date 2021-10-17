@@ -285,7 +285,6 @@ body {
 } 
 /*----- css cho phần menu cha -----*/
 .menu > ul > li {
-    float:left;
     display:inline-block;
     position:relative;
     font-size:19px;
@@ -424,15 +423,7 @@ text-align: center;
     letter-spacing: .02em;
     color: #222;
 }
-.diachi-home{
-	
-}
-.sodienthoai-home{
-	
-}
-.mail-home{
-	
-}
+
 .word-home{
 	font-size: 36px;
     line-height: 42px;

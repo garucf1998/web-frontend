@@ -22,15 +22,13 @@ import enity.PhieuKhambenh;
 
 @Repository
 public class PhieuKhamService {
-//	static String POST_PHIEU_KHAM_BENH="http://13.212.45.136:5001/phieukham/insert";
-//	static String PUT_PHIEU_KHAM_BENH="http://13.212.45.136:5001/phieukham/update";
-//	static String GET_ONE_PHIEU_KHAM="http://13.212.45.136:5001/phieukham/getone";
+
+	static String URL="http://13.250.190.43:5001";
 	
-	
-	static String GET_PHIEU_KHAM_BY_ID_BENH_NHAN="http://localhost:5001/phieukham/getphieukhambybenhnhanid";
-	static String POST_PHIEU_KHAM_BENH="http://localhost:5001/phieukham/insert";
-	static String PUT_PHIEU_KHAM_BENH="http://localhost:5001/phieukham/update";
-	static String GET_ONE_PHIEU_KHAM="http://localhost:5001/phieukham/getone";
+	static String GET_PHIEU_KHAM_BY_ID_BENH_NHAN=URL+"/phieukham/getphieukhambybenhnhanid";
+	static String POST_PHIEU_KHAM_BENH=URL+"/phieukham/insert";
+	static String PUT_PHIEU_KHAM_BENH=URL+"/phieukham/update";
+	static String GET_ONE_PHIEU_KHAM=URL+"/phieukham/getone";
 	
 	/**
 	 * @author Vien

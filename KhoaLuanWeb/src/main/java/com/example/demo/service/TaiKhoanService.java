@@ -19,12 +19,14 @@ import enity.Role;
 import enity.TaiKhoan;
 @Repository
 public class TaiKhoanService {
-	public  String GET_ALL_TAI_KHOAN="http://localhost:5001/taikhoan/getall";
-	public  String GET_ONE_TAI_KHOAN="http://localhost:5001/taikhoan/getone";
-	public  String POST_TAI_KHOAN="http://localhost:5001/taikhoan/insert"; 
-	public  String DELETE_TAI_KHOAN="http://localhost:5001/taikhoan/delete";
-	public  String PUT_TAI_KHOAN="http://localhost:5001/taikhoan/update";
-	public  String GET_ALL_ROLE="http://localhost:5001/role/getall";
+	
+	static String URL="http://13.250.190.43:5001";
+	public  String GET_ALL_TAI_KHOAN=URL+"/taikhoan/getall";
+	public  String GET_ONE_TAI_KHOAN=URL+"/taikhoan/getone";
+	public  String POST_TAI_KHOAN=URL+"/taikhoan/insert"; 
+	public  String DELETE_TAI_KHOAN=URL+"/taikhoan/delete";
+	public  String PUT_TAI_KHOAN=URL+"/taikhoan/update";
+	public  String GET_ALL_ROLE=URL+"/role/getall";
 
 	public List<TaiKhoan>GetAllTaiKhoan() throws IOException {
 		List<TaiKhoan>getall=new ArrayList<>();

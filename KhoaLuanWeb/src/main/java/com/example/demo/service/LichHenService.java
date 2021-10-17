@@ -23,9 +23,11 @@ import com.google.gson.JsonParser;
 @Repository
 public class LichHenService {
 	
-	static String POST_LICH_HEN="http://localhost:5001/lichhen/insert";
-	static String GET_LICH_HEN_TRONG_NGAY="http://localhost:5001/lichhen/ktralichhenbn";
-	static String GET_ALL_LICH_HEN_BY_BN="http://localhost:5001/lichhen/getlichhenbybn";
+	static String URL="http://13.250.190.43:5001";
+	
+	static String POST_LICH_HEN=URL+"/lichhen/insert";
+	static String GET_LICH_HEN_TRONG_NGAY=URL+"/lichhen/ktralichhenbn";
+	static String GET_ALL_LICH_HEN_BY_BN=URL+"/lichhen/getlichhenbybn";
 	
 	
 	/**

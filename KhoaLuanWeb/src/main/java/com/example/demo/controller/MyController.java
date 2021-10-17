@@ -46,6 +46,7 @@ import enity.ChiTietDonThuoc;
 import enity.LichHen;
 import enity.NhanVien;
 import enity.PhieuKhambenh;
+import enity.Role;
 import enity.TaiKhoan;
 
 @Controller
@@ -71,8 +72,7 @@ public class MyController {
 			System.out.println(principal.getName());
 		}
 		Object principal1 = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		// BCryptPasswordEncoder passwordEncoder =new BCryptPasswordEncoder();
-		// System.out.println("mat khau la :" +passwordEncoder.encode("anh"));
+		
 		
 		if (principal != null) {
 			String username = principal.getName();
@@ -206,15 +206,17 @@ public class MyController {
 	@PostMapping("/dang-ky")
 	public String dangKy(@ModelAttribute("benhNhan") BenhNhan benhNhan, @ModelAttribute("taikhoan") TaiKhoan taikhoan,
 			@RequestParam("ngay_sinh") String ngaysinh, RedirectAttributes redirectAttributes) throws IOException {
-
+		List<Role> listrole=new ArrayList<Role>();
 		TaiKhoan tkExist = null;
 		tkExist = taikhoanservice.GetOneTaiKhoan(taikhoan.getUsername());
 		if (tkExist.getUsername() != null) {
 			redirectAttributes.addFlashAttribute("thatbai", "Đăng ký thất bại!- Trùng username");
 			return "index";
 		}
-
-		taikhoan.setRole(benhnhanservice.GetOneRole((long) 5));
+		listrole= taikhoanservice.GetAllRole();
+		for(int i=0;i<listrole.size();i++)
+			if(listrole.get(i).getName().equals("Bệnh Nhân"))
+				taikhoan.setRole(listrole.get(i));
 		taikhoan.setPassword("123456");
 		int ketquaAddTK = taikhoanservice.POSTRequest(taikhoan);
 		if (ketquaAddTK == 200) {

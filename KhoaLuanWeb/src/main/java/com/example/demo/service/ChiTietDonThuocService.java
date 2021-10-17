@@ -22,10 +22,12 @@ import enity.Thuoc;
 @Repository
 public class ChiTietDonThuocService {
 
-	static String GET_ALL_CHI_TIET_DON_THUOC="http://localhost:5001/chitietdonthuoc/getall";
-	static String POST_CHI_TIET_DON_THUOC="http://localhost:5001/chitietdonthuoc/insert";
-	static String GET_ALL_CHI_TIET_DON_THUOC_BY_DON_THUOC="http://localhost:5001/chitietdonthuoc/getallbydonthuoc";
-	static String GET_ALL_CHI_TIET_DON_THUOC_BY_BENH_NHAN="http://localhost:5001/chitietdonthuoc/getallbybenhnhan";
+	static String URL="http://13.250.190.43:5001";
+	
+	static String GET_ALL_CHI_TIET_DON_THUOC=URL+"/chitietdonthuoc/getall";
+	static String POST_CHI_TIET_DON_THUOC=URL+"/chitietdonthuoc/insert";
+	static String GET_ALL_CHI_TIET_DON_THUOC_BY_DON_THUOC=URL+"/chitietdonthuoc/getallbydonthuoc";
+	static String GET_ALL_CHI_TIET_DON_THUOC_BY_BENH_NHAN=URL+"/chitietdonthuoc/getallbybenhnhan";
 	/**
 	 * @author Vien
 	 * date: 13/5/2021

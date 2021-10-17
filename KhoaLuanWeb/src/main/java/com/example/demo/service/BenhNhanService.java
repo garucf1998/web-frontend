@@ -16,38 +16,31 @@ import java.util.regex.Pattern;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Repository;
 
-import enity.BenhNhan;
-import enity.PhieuKhambenh;
-import enity.Role;
-import enity.TaiKhoan;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonParser;
+
+import enity.BenhNhan;
+import enity.PhieuKhambenh;
+import enity.Role;
+import enity.TaiKhoan;
 @Repository
 public class BenhNhanService {
 	
-//	static String GET_ALL_BENH_NHAN="http://13.212.45.136:5001/benhnhan/getall";
-//	static String GET_ALL_PHIEU_KHAM="http://13.212.45.136:5001/benhnhan/getlist";
-//	static String GET_ONE_BENH_NHAN="http://13.212.45.136:5001/benhnhan/getone";
-//	static String PUT_BENH_NHAN="http://13.212.45.136:5001/benhnhan/update";
-//	static String GET_BENH_NHAN_THEO_TEN="http://13.212.45.136:5001/benhnhan/getbyname";
-//	static String GET_BENH_NHAN_THEO_SDT="http://13.212.45.136:5001/benhnhan/getbysdt";
-//	static String GET_BENH_NHAN_THEO_CMND="http://13.212.45.136:5001/benhnhan/getbycmnd";
-//	static String POST_BENH_NHAN="http://13.212.45.136:5001/benhnhan/insert";
-//	static String GET_ONE_ROLE="http://13.212.45.136:5001/role/getone/5";
-	
-	static String GET_ALL_BENH_NHAN="http://localhost:5001/benhnhan/getall";
-	static String GET_ALL_PHIEU_KHAM="http://localhost:5001/benhnhan/getlist";
-	static String GET_ONE_BENH_NHAN="http://localhost:5001/benhnhan/getone";
-	static String PUT_BENH_NHAN="http://localhost:5001/benhnhan/update";
-	static String GET_BENH_NHAN_THEO_TEN="http://localhost:5001/benhnhan/getbyname";
-	static String GET_BENH_NHAN_THEO_SDT="http://localhost:5001/benhnhan/getbysdt";
-	static String GET_BENH_NHAN_THEO_CMND="http://localhost:5001/benhnhan/getbycmnd";
-	static String POST_BENH_NHAN="http://localhost:5001/benhnhan/insert";
-	static String GET_ONE_ROLE="http://localhost:5001/role/getone/5";
-	static String GET_BENH_NHAN_BY_LICH_HEN="http://localhost:5001/lichhen/getlichhen";
-	static String GET_BENH_NHAN_USERNAME="http://localhost:5001/benhnhan/getbytaikhoan";
+	static String URL="http://13.250.190.43:5001";
+	static String GET_ALL_BENH_NHAN=URL+"/benhnhan/getall";
+	static String GET_ALL_PHIEU_KHAM=URL +"/benhnhan/getlist";
+	static String GET_ONE_BENH_NHAN=URL+"/benhnhan/getone";
+	static String PUT_BENH_NHAN=URL+"/benhnhan/update";
+	static String GET_BENH_NHAN_THEO_TEN=URL+"/benhnhan/getbyname";
+	static String GET_BENH_NHAN_THEO_SDT=URL+"/benhnhan/getbysdt";
+	static String GET_BENH_NHAN_THEO_CMND=URL+"h/benhnhan/getbycmnd";
+	static String POST_BENH_NHAN=URL+"/benhnhan/insert";
+	static String GET_ONE_ROLE=URL+"/role/getone/5";
+	static String GET_BENH_NHAN_BY_LICH_HEN=URL+"/lichhen/getlichhen";
+	static String GET_BENH_NHAN_USERNAME=URL+"/benhnhan/getbytaikhoan";
 	
 	/**
 	 * @author Vien
