@@ -29,7 +29,7 @@ import enity.TaiKhoan;
 @Repository
 public class BenhNhanService {
 	
-	static String URL="http://13.250.190.43:5001";
+	static String URL="http://localhost:5001";
 	static String GET_ALL_BENH_NHAN=URL+"/benhnhan/getall";
 	static String GET_ALL_PHIEU_KHAM=URL +"/benhnhan/getlist";
 	static String GET_ONE_BENH_NHAN=URL+"/benhnhan/getone";

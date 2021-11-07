@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.jms.JMSException;
 import javax.mail.internet.MimeMessage;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -36,6 +37,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.example.demo.security.CustomUserDetails;
 import com.example.demo.service.BenhNhanService;
 import com.example.demo.service.ChiTietDonThuocService;
+import com.example.demo.service.GuiBenhNhan;
 import com.example.demo.service.LichHenService;
 import com.example.demo.service.NhanVienService;
 import com.example.demo.service.PhieuKhamService;
@@ -63,6 +65,8 @@ public class MyController {
 	PhieuKhamService phieukhamservice;
 	@Autowired
 	ChiTietDonThuocService chitietdonthuocservice;
+	@Autowired
+	GuiBenhNhan guibenhnhan;
 	@Autowired
 	public JavaMailSender javaMailSender;
 
@@ -300,7 +304,7 @@ public class MyController {
 		}
 		BenhNhan benhNhan = benhnhanservice.GetOneBenhNhanByUser(principal.getName());
 
-		
+
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 		Date date = new Date();
 		try {
@@ -308,6 +312,7 @@ public class MyController {
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
+		// cần sửa lại mã nhân viên với mã bẹnh nhân
 		LichHen lh = null;
 		lh = lichhenservice.GetLichHenBenhNhan(lichhenservice.doichuoitungay(date), benhNhan.getId());
 		lichHen.setBenhNhan(benhNhan);

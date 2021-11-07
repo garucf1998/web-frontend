@@ -22,7 +22,7 @@ import enity.Thuoc;
 @Repository
 public class ChiTietDonThuocService {
 
-	static String URL="http://13.250.190.43:5001";
+	static String URL="http://localhost:5001";
 	
 	static String GET_ALL_CHI_TIET_DON_THUOC=URL+"/chitietdonthuoc/getall";
 	static String POST_CHI_TIET_DON_THUOC=URL+"/chitietdonthuoc/insert";

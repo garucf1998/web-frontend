@@ -20,7 +20,7 @@ import enity.TaiKhoan;
 @Repository
 public class TaiKhoanService {
 	
-	static String URL="http://13.250.190.43:5001";
+	static String URL="http://localhost:5001";
 	public  String GET_ALL_TAI_KHOAN=URL+"/taikhoan/getall";
 	public  String GET_ONE_TAI_KHOAN=URL+"/taikhoan/getone";
 	public  String POST_TAI_KHOAN=URL+"/taikhoan/insert"; 
