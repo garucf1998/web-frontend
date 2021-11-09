@@ -37,7 +37,6 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.example.demo.security.CustomUserDetails;
 import com.example.demo.service.BenhNhanService;
 import com.example.demo.service.ChiTietDonThuocService;
-import com.example.demo.service.GuiBenhNhan;
 import com.example.demo.service.LichHenService;
 import com.example.demo.service.NhanVienService;
 import com.example.demo.service.PhieuKhamService;
@@ -65,8 +64,6 @@ public class MyController {
 	PhieuKhamService phieukhamservice;
 	@Autowired
 	ChiTietDonThuocService chitietdonthuocservice;
-	@Autowired
-	GuiBenhNhan guibenhnhan;
 	@Autowired
 	public JavaMailSender javaMailSender;
 
