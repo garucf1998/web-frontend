@@ -15,10 +15,10 @@ import java.util.regex.Pattern;
 
 import org.springframework.stereotype.Repository;
 
-import enity.BenhNhan;
-import enity.NhanVien;
-import enity.Role;
-import enity.TaiKhoan;
+import com.example.demo.enity.BenhNhan;
+import com.example.demo.enity.NhanVien;
+import com.example.demo.enity.Role;
+import com.example.demo.enity.TaiKhoan;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;

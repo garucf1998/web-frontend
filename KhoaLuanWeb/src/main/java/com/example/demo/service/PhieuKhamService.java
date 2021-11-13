@@ -16,8 +16,8 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonParser;
 
-import enity.BenhNhan;
-import enity.PhieuKhambenh;
+import com.example.demo.enity.BenhNhan;
+import com.example.demo.enity.PhieuKhambenh;
 
 
 @Repository

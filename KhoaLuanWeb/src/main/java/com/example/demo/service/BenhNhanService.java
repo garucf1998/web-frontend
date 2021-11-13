@@ -22,10 +22,10 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonParser;
 
-import enity.BenhNhan;
-import enity.PhieuKhambenh;
-import enity.Role;
-import enity.TaiKhoan;
+import com.example.demo.enity.BenhNhan;
+import com.example.demo.enity.PhieuKhambenh;
+import com.example.demo.enity.Role;
+import com.example.demo.enity.TaiKhoan;
 @Repository
 public class BenhNhanService {
 	

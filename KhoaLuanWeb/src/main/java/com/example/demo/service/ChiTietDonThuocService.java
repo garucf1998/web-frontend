@@ -16,9 +16,9 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonParser;
 
-import enity.ChiTietDonThuoc;
-import enity.DonThuoc;
-import enity.Thuoc;
+import com.example.demo.enity.ChiTietDonThuoc;
+import com.example.demo.enity.DonThuoc;
+import com.example.demo.enity.Thuoc;
 @Repository
 public class ChiTietDonThuocService {
 

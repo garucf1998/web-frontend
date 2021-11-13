@@ -15,8 +15,8 @@ import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonParser;
 
-import enity.Role;
-import enity.TaiKhoan;
+import com.example.demo.enity.Role;
+import com.example.demo.enity.TaiKhoan;
 @Repository
 public class TaiKhoanService {
 	

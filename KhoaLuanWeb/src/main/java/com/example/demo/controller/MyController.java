@@ -42,13 +42,13 @@ import com.example.demo.service.NhanVienService;
 import com.example.demo.service.PhieuKhamService;
 import com.example.demo.service.TaiKhoanService;
 
-import enity.BenhNhan;
-import enity.ChiTietDonThuoc;
-import enity.LichHen;
-import enity.NhanVien;
-import enity.PhieuKhambenh;
-import enity.Role;
-import enity.TaiKhoan;
+import com.example.demo.enity.BenhNhan;
+import com.example.demo.enity.ChiTietDonThuoc;
+import com.example.demo.enity.LichHen;
+import com.example.demo.enity.NhanVien;
+import com.example.demo.enity.PhieuKhambenh;
+import com.example.demo.enity.Role;
+import com.example.demo.enity.TaiKhoan;
 
 @Controller
 public class MyController {
@@ -313,7 +313,6 @@ public class MyController {
 		LichHen lh = null;
 		lh = lichhenservice.GetLichHenBenhNhan(lichhenservice.doichuoitungay(date), benhNhan.getId());
 		lichHen.setBenhNhan(benhNhan);
-		lichHen.setNhanvien(null);
 		lichHen.setThoiGian(date);
 		lichHen.setHinhThuc(true);
 		lichHen.setTrangThai("3");

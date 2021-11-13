@@ -8,7 +8,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import enity.TaiKhoan;
+import com.example.demo.enity.TaiKhoan;
 import com.example.demo.service.TaiKhoanService;
 
 

@@ -13,8 +13,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import enity.LichHen;
-import enity.Role;
+import com.example.demo.enity.LichHen;
+import com.example.demo.enity.Role;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
